@@ -1,5 +1,7 @@
 # company-stock-listing
 
+token: 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
+
 Techonologies used:
   1) Spring boot
   2) Open api
