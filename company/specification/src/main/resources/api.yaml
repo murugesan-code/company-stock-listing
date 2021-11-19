@@ -1,0 +1,47 @@
+openapi: 3.0.2
+info:
+  title: "E-Stock listing company API"
+  description: "Register company in stock market"
+  version: "0.0.1-SNAPSHOT"
+servers:
+  - url: "https://localhost:8443"
+    description: "Development server"
+paths:
+  /api/v1.0/login:
+    post:
+      summary: Login to company application
+      operationId: getAccessToken
+      tags:
+        - Login
+      requestBody:
+        description: Credentials payload
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '#/components/schemas/Credentials'
+      responses:
+        '200':
+          description: Created token succcessfully
+          content:
+            application/json:
+              schema:
+                type: object
+                $ref: '#/components/schemas/Token'
+components:
+  schemas:
+    Credentials:
+      type: object
+      required:
+        - username
+        - password
+      properties:
+        username:
+          type: string
+        password:
+          type: string
+    Token:
+      type: object
+      properties:
+        token:
+          type: string

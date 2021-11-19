@@ -1,0 +1,27 @@
+server:
+  port: 5000
+  #ssl:
+   # key-store: classpath:stock.jks
+    #key-store-password: password
+   # key-store-type: JKS
+   # key-alias: stock
+   # key-password: password
+   # key-store-provider: SUN
+springdoc:
+  api-docs:
+    path: /v1/api
+  swagger-ui:
+    path: /swagger-ui.html
+spring:
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/company
+    username: murugesan
+    password: password
+  jpa:
+    hibernate.ddl-auto: update
+    generate-ddl: true
+    show-sql: true
+  application:
+    name: COMPANY-SERVICE
+  
