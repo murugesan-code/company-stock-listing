@@ -15,3 +15,8 @@ Techonologies used:
   6) JWT
   7) Prometheus
   8) Grafana
+  
+  
+  
+  
+  https://downloads.apache.org/kafka/2.8.1/

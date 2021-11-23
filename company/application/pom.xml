@@ -7,11 +7,11 @@
 		<artifactId>company</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>application</artifactId>
+	<artifactId>company-application</artifactId>
 	<dependencies>
 		<dependency>
 			<groupId>com.stocklisting</groupId>
-			<artifactId>specification</artifactId>
+			<artifactId>company-specification</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
@@ -51,7 +51,7 @@
 			<version>1.18.20</version>
 			<scope>provided</scope>
 		</dependency>
-		<!-- <dependency>
+		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 			<version>2.2.9.RELEASE</version>
@@ -66,18 +66,19 @@
 			<artifactId>spring-boot-starter-actuator</artifactId>
 			<version>2.1.8.RELEASE</version>
 		</dependency>
-		https://mvnrepository.com/artifact/io.micrometer/micrometer-registry-prometheus
+		<!-- https://mvnrepository.com/artifact/io.micrometer/micrometer-registry-prometheus -->
 		<dependency>
 			<groupId>io.micrometer</groupId>
 			<artifactId>micrometer-registry-prometheus</artifactId>
 			<version>1.7.3</version>
 		</dependency>
-		https://mvnrepository.com/artifact/org.springframework.kafka/spring-kafka
+
+		<!-- https://mvnrepository.com/artifact/org.springframework.kafka/spring-kafka -->
 		<dependency>
 			<groupId>org.springframework.kafka</groupId>
 			<artifactId>spring-kafka</artifactId>
-			<version>2.5.16.RELEASE</version>
-		</dependency> -->
+			<version>2.1.8.RELEASE</version>
+		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-security -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -95,20 +96,22 @@
 			<version>2.3.0</version>
 		</dependency>
 	</dependencies>
-	<!-- <dependencyManagement>
+	<dependencyManagement>
 		<dependencies>
-			https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-dependencies
+			<!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-dependencies -->
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-dependencies</artifactId>
-				<version>Greenwich.SR3</version>
+				<version>${spring-cloud.version}</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
 		</dependencies>
-	</dependencyManagement> -->
+	</dependencyManagement>
+
 	<properties>
 		<maven.compiler.source>8</maven.compiler.source>
 		<maven.compiler.target>8</maven.compiler.target>
+		<spring-cloud.version>Greenwich.SR3</spring-cloud.version>
 	</properties>
 </project>
