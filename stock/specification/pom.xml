@@ -56,8 +56,8 @@
 						<configuration>
 							<inputSpec>${project.basedir}/src/main/resources/api.yaml</inputSpec>
 							<generatorName>spring</generatorName>
-							<apiPackage>com.company.api</apiPackage>
-							<modelPackage>com.company.model</modelPackage>
+							<apiPackage>com.stock.api</apiPackage>
+							<modelPackage>com.stock.model</modelPackage>
 							<supportingFilesToGenerate>ApiUtil.java</supportingFilesToGenerate>
 							<configOptions>
 								<interfaceOnly>true</interfaceOnly>

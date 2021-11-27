@@ -9,7 +9,7 @@
 	<packaging>pom</packaging>
 
 	<modules>
-		<module>stock-application</module>
-		<module>stock-specification</module>
+		<module>application</module>
+		<module>specification</module>
 	</modules>
 </project>

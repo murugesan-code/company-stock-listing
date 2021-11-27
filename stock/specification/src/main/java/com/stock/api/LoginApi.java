@@ -3,10 +3,10 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-package com.company.api;
+package com.stock.api;
 
-import com.company.model.Credentials;
-import com.company.model.Token;
+import com.stock.model.Credentials;
+import com.stock.model.Token;
 import io.swagger.annotations.*;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -21,7 +21,7 @@ import javax.validation.constraints.*;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2021-11-28T01:25:32.434+05:30[Asia/Kolkata]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2021-11-28T01:21:00.362+05:30[Asia/Kolkata]")
 @Validated
 @Api(value = "Login", description = "the Login API")
 public interface LoginApi {

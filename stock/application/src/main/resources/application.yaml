@@ -15,7 +15,7 @@ springdoc:
 spring:
   datasource:
     driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/company
+    url: jdbc:mysql://localhost:3306/stock
     username: murugesan
     password: password
   jpa:

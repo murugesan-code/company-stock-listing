@@ -1,12 +1,5 @@
 server:
   port: 8081
-  #ssl:
-   # key-store: classpath:stock.jks
-    #key-store-password: password
-   # key-store-type: JKS
-   # key-alias: stock
-   # key-password: password
-   # key-store-provider: SUN
 springdoc:
   api-docs:
     path: /v1/api

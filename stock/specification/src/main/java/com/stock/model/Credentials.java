@@ -1,4 +1,4 @@
-package com.company.model;
+package com.stock.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -12,7 +12,7 @@ import javax.validation.constraints.*;
 /**
  * Credentials
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2021-11-28T01:25:32.434+05:30[Asia/Kolkata]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2021-11-28T01:21:00.362+05:30[Asia/Kolkata]")
 public class Credentials   {
   @JsonProperty("username")
   private String username;

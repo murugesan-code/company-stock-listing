@@ -7,27 +7,6 @@ servers:
   - url: "https://localhost:8082"
     description: "Development server"
 paths:
-  /api/v1.0/login:
-    post:
-      summary: Login to company application
-      operationId: getAccessToken
-      tags:
-        - Login
-      requestBody:
-        description: Credentials payload
-        content:
-          application/json:
-            schema:
-              type: object
-              $ref: '#/components/schemas/Credentials'
-      responses:
-        '200':
-          description: Created token succcessfully
-          content:
-            application/json:
-              schema:
-                type: object
-                $ref: '#/components/schemas/Token'
   /api/v1.0/market/stock/add/{companyCode}:
     post:
       summary: Add new stock price
@@ -73,11 +52,11 @@ paths:
           description: Created stock price succcessfully
           content:
             application/json:
-              schema:
-                type: array
-                items:
-                  type: object
-                  $ref: '#/components/schemas/StockPrice'
+            schema:
+              type: array
+              items:
+                type: object
+                $ref: '#/components/schemas/StockPrice'
   /api/v1.0/market/stock/delete/{companyCode}:
     delete:
       summary: Delete stock price
@@ -89,28 +68,11 @@ paths:
           in: path
           description: 'Company code passed'
           required: true
-          schema:
-            type: string
       responses:
-        '200':
-          description: Deleted stock price succcessfully
+       '200':
+         description: Deleted stock price succcessfully
 components:
   schemas:
-    Credentials:
-      type: object
-      required:
-        - username
-        - password
-      properties:
-        username:
-          type: string
-        password:
-          type: string
-    Token:
-      type: object
-      properties:
-        token:
-          type: string
     StockPrice:
       type: object
       required:

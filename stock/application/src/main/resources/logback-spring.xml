@@ -3,7 +3,7 @@
 	<include
 		resource="org/springframework/boot/logging/logback/defaults.xml" />
 	<property name="LOG_FILE"
-		value="/home/murugesan/learning/company-stock-listing/logs/company.log" />
+		value="/home/murugesan/learning/company-stock-listing/logs/stock.log" />
 	<include
 		resource="org/springframework/boot/logging/logback/file-appender.xml" />
 	<root level="INFO">

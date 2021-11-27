@@ -1,4 +1,6 @@
-src/main/java/com/company/api/ApiUtil.java
-src/main/java/com/company/api/LoginApi.java
-src/main/java/com/company/model/Credentials.java
-src/main/java/com/company/model/Token.java
+src/main/java/com/stock/api/ApiUtil.java
+src/main/java/com/stock/api/LoginApi.java
+src/main/java/com/stock/api/StockApi.java
+src/main/java/com/stock/model/Credentials.java
+src/main/java/com/stock/model/StockPrice.java
+src/main/java/com/stock/model/Token.java
