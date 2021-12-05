@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: GATEWAY-SERVICE
+  cloud:
+    gateway:
+      routes[0]:
+        id: COMPANY-STOCK
+        uri: http://localhost:8082/
+        predicates:
+          - path:/api/v1.0/market/stock/**
+      routes[1]:
+        id: COMPANY-SERVICE
+        uri: http://localhost:8081/
+        predicates:
+          - path:/api/v1.0/market/company/**
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+server:
+  port: 9095

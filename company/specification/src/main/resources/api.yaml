@@ -139,15 +139,17 @@ components:
           type: string
         turnover:
           type: integer
-          minimum: 100000000
-          example: 100000000
+          minimum: 1000
+          example: 1000
         website:
           type: string
         stockExchange:
           type: string
-        stockPrice:
-          type: object
-          $ref: '#/components/schema/StockPrice'
+        stockPrices:
+          type: array
+          items:
+            type: object
+            $ref: '#/components/schemas/StockPrice'
     StockPrice:
       type: object
       required:

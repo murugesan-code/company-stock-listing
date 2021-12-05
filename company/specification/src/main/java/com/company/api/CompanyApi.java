@@ -20,7 +20,7 @@ import javax.validation.constraints.*;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2021-11-28T01:25:32.434+05:30[Asia/Kolkata]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2021-12-05T17:01:59.422+05:30[Asia/Kolkata]")
 @Validated
 @Api(value = "Company", description = "the Company API")
 public interface CompanyApi {
@@ -86,7 +86,7 @@ public interface CompanyApi {
         getRequest().ifPresent(request -> {
             for (MediaType mediaType: MediaType.parseMediaTypes(request.getHeader("Accept"))) {
                 if (mediaType.isCompatibleWith(MediaType.valueOf("application/json"))) {
-                    String exampleString = "{ \"stockExchange\" : \"stockExchange\", \"website\" : \"website\", \"code\" : \"code\", \"name\" : \"name\", \"id\" : 0, \"ceo\" : \"ceo\", \"turnover\" : 100000000, \"stockPrice\" : { \"endDate\" : \"2021-01-30T00:00:00.000+0000\", \"id\" : 6, \"stockPrice\" : \"\", \"startDate\" : \"2021-01-30T00:00:00.000+0000\" } }";
+                    String exampleString = "{ \"stockExchange\" : \"stockExchange\", \"website\" : \"website\", \"code\" : \"code\", \"name\" : \"name\", \"stockPrices\" : [ { \"endDate\" : \"2021-01-30T00:00:00.000+0000\", \"id\" : 6, \"stockPrice\" : \"\", \"startDate\" : \"2021-01-30T00:00:00.000+0000\" }, { \"endDate\" : \"2021-01-30T00:00:00.000+0000\", \"id\" : 6, \"stockPrice\" : \"\", \"startDate\" : \"2021-01-30T00:00:00.000+0000\" } ], \"id\" : 0, \"ceo\" : \"ceo\", \"turnover\" : 1000 }";
                     ApiUtil.setExampleResponse(request, "application/json", exampleString);
                     break;
                 }
@@ -115,7 +115,7 @@ public interface CompanyApi {
         getRequest().ifPresent(request -> {
             for (MediaType mediaType: MediaType.parseMediaTypes(request.getHeader("Accept"))) {
                 if (mediaType.isCompatibleWith(MediaType.valueOf("application/json"))) {
-                    String exampleString = "{ \"stockExchange\" : \"stockExchange\", \"website\" : \"website\", \"code\" : \"code\", \"name\" : \"name\", \"id\" : 0, \"ceo\" : \"ceo\", \"turnover\" : 100000000, \"stockPrice\" : { \"endDate\" : \"2021-01-30T00:00:00.000+0000\", \"id\" : 6, \"stockPrice\" : \"\", \"startDate\" : \"2021-01-30T00:00:00.000+0000\" } }";
+                    String exampleString = "{ \"stockExchange\" : \"stockExchange\", \"website\" : \"website\", \"code\" : \"code\", \"name\" : \"name\", \"stockPrices\" : [ { \"endDate\" : \"2021-01-30T00:00:00.000+0000\", \"id\" : 6, \"stockPrice\" : \"\", \"startDate\" : \"2021-01-30T00:00:00.000+0000\" }, { \"endDate\" : \"2021-01-30T00:00:00.000+0000\", \"id\" : 6, \"stockPrice\" : \"\", \"startDate\" : \"2021-01-30T00:00:00.000+0000\" } ], \"id\" : 0, \"ceo\" : \"ceo\", \"turnover\" : 1000 }";
                     ApiUtil.setExampleResponse(request, "application/json", exampleString);
                     break;
                 }

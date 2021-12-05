@@ -13,7 +13,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Company {
+public class CompanyEntity {
 
 	@Id
 	@GeneratedValue

@@ -6,6 +6,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
 import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
@@ -13,7 +15,7 @@ import javax.validation.constraints.*;
 /**
  * Company
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2021-11-28T01:25:32.434+05:30[Asia/Kolkata]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2021-12-05T17:01:59.422+05:30[Asia/Kolkata]")
 public class Company   {
   @JsonProperty("id")
   private Integer id;
@@ -36,8 +38,9 @@ public class Company   {
   @JsonProperty("stockExchange")
   private String stockExchange;
 
-  @JsonProperty("stockPrice")
-  private StockPrice stockPrice;
+  @JsonProperty("stockPrices")
+  @Valid
+  private List<StockPrice> stockPrices = null;
 
   public Company id(Integer id) {
     this.id = id;
@@ -129,13 +132,13 @@ public class Company   {
 
   /**
    * Get turnover
-   * minimum: 100000000
+   * minimum: 1000
    * @return turnover
   */
-  @ApiModelProperty(example = "100000000", required = true, value = "")
+  @ApiModelProperty(example = "1000", required = true, value = "")
   @NotNull
 
-@Min(100000000) 
+@Min(1000) 
   public Integer getTurnover() {
     return turnover;
   }
@@ -186,25 +189,33 @@ public class Company   {
     this.stockExchange = stockExchange;
   }
 
-  public Company stockPrice(StockPrice stockPrice) {
-    this.stockPrice = stockPrice;
+  public Company stockPrices(List<StockPrice> stockPrices) {
+    this.stockPrices = stockPrices;
+    return this;
+  }
+
+  public Company addStockPricesItem(StockPrice stockPricesItem) {
+    if (this.stockPrices == null) {
+      this.stockPrices = new ArrayList<>();
+    }
+    this.stockPrices.add(stockPricesItem);
     return this;
   }
 
   /**
-   * Get stockPrice
-   * @return stockPrice
+   * Get stockPrices
+   * @return stockPrices
   */
   @ApiModelProperty(value = "")
 
   @Valid
 
-  public StockPrice getStockPrice() {
-    return stockPrice;
+  public List<StockPrice> getStockPrices() {
+    return stockPrices;
   }
 
-  public void setStockPrice(StockPrice stockPrice) {
-    this.stockPrice = stockPrice;
+  public void setStockPrices(List<StockPrice> stockPrices) {
+    this.stockPrices = stockPrices;
   }
 
 
@@ -224,12 +235,12 @@ public class Company   {
         Objects.equals(this.turnover, company.turnover) &&
         Objects.equals(this.website, company.website) &&
         Objects.equals(this.stockExchange, company.stockExchange) &&
-        Objects.equals(this.stockPrice, company.stockPrice);
+        Objects.equals(this.stockPrices, company.stockPrices);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, code, name, ceo, turnover, website, stockExchange, stockPrice);
+    return Objects.hash(id, code, name, ceo, turnover, website, stockExchange, stockPrices);
   }
 
   @Override
@@ -244,7 +255,7 @@ public class Company   {
     sb.append("    turnover: ").append(toIndentedString(turnover)).append("\n");
     sb.append("    website: ").append(toIndentedString(website)).append("\n");
     sb.append("    stockExchange: ").append(toIndentedString(stockExchange)).append("\n");
-    sb.append("    stockPrice: ").append(toIndentedString(stockPrice)).append("\n");
+    sb.append("    stockPrices: ").append(toIndentedString(stockPrices)).append("\n");
     sb.append("}");
     return sb.toString();
   }
