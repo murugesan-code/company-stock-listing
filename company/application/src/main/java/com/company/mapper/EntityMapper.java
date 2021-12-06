@@ -19,7 +19,7 @@ public class EntityMapper {
 		return companyEntity;
 	}
 
-	public static Company toComapnyModel(CompanyEntity company, List<StockPrice> stockPrice) {
+	public static Company toComapnyModel(CompanyEntity company, List<StockPrice> stockPrices) {
 
 		Company companyModel = new Company();
 		companyModel.setId(company.getId());
@@ -28,7 +28,7 @@ public class EntityMapper {
 		companyModel.setWebsite(company.getWebsite());
 		companyModel.setCeo(company.getCeo());
 		companyModel.setStockExchange(company.getStockExchange());
-		
+		companyModel.setStockPrices(stockPrices);
 		return companyModel;
 	}
 }
