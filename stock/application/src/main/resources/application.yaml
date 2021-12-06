@@ -1,5 +1,5 @@
 server:
-  port: 8082
+  port: 8083
   #ssl:
    # key-store: classpath:stock.jks
     #key-store-password: password

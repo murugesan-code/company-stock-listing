@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.company.model.StockPrice;
 
-@FeignClient("STOCK-SERVICE")
+@FeignClient("GATEWAY-SERVICE")
 public interface StockClient {
 
 	@GetMapping("/api/v1.0/market/stock/getall/{companyCode}")

@@ -50,9 +50,6 @@ public class CompanyService implements com.company.api.CompanyApi {
 			List<com.company.entity.CompanyEntity> companies = repository.findAll();
 			for (com.company.entity.CompanyEntity company : companies) {
 				List<StockPrice> stockPrices = StockClient.getStockPricesByComapnyCode(company.getCode());
-				for (StockPrice stockPrice : stockPrices) {
-					log.info("Stock price:" + stockPrice.getStockPrice());
-				}
 				Company companyModel = EntityMapper.toComapnyModel(company, stockPrices);
 				companyModels.add(companyModel);
 			}

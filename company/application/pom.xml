@@ -91,6 +91,7 @@
 			<artifactId>spring-cloud-starter-loadbalancer</artifactId>
 			<version>2.2.9.RELEASE</version>
 		</dependency>
+
 	</dependencies>
 	<dependencyManagement>
 		<dependencies>
