@@ -7,7 +7,7 @@ Techonologies used:
   1) Spring boot
   2) Open api
   3) Kafka
-  4) Microservices
+  4) Spring cloud
       a) Eureka server
       b) Feign client
       c) Gateway
